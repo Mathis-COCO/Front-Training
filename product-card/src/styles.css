@@ -1,0 +1,103 @@
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+#comp-text {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 300;
+}
+
+#vs {
+    color: green;
+    text-align: center;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.parent-text {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.main-div-object {
+    width: 100%;
+}
+
+#right-column {
+    background-color: white;
+}
+
+#perfume {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 500;
+    padding-top: 10%;
+}
+
+#fragrance-title-1 {
+    font-family: "Fraunces", sans-serif;
+    font-weight: bolder;
+}
+
+#paragraph-1 {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+}
+
+#price {
+    color: hsl(112, 67%, 24%);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#price-align {
+    display: flex;
+}
+
+.cart-button {
+    background-color: hsl(112, 67%, 24%);
+    border-radius: 15px;
+    font: bold;
+    font-family: Arial;
+    color: white;
+    height: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%; 
+    width: 100%;
+}
+
+.cart-button:hover {
+    background-color: hsl(112, 67%, 15%);
+}
+
+@media only screen and (min-width: 375px) and (max-width: 1440px) {
+  /* mobile: */
+  #mob-img-1 {display: block; border-radius: 25px 25px 0px 0px; width: 330px; margin-bottom: -12px;}
+  #mob-img-2 {display: block; border-radius: 25px; margin-left: 12%;}
+  #desk-img-1 {display: none;}
+  #desk-img-2 {display: none;}
+  #right-column {border-radius: 0px 0px 25px 25px; width: 290px; padding-left: 20px; padding-right: 20px;}
+  .main-div-1 {margin-top: 3%;margin-right: 10%;}
+  #my-solut {padding-right: 300px;}
+}
+@media only screen and (min-width: 1440px) {
+  /* desktop: */
+  #mob-img-1 {display: none;}
+  #mob-img-2 {display: none;}
+  #desk-img-1 {display: block; border-radius: 25px 0px 0px 25px;}
+  #desk-img-2 {display: block; border-radius: 25px; }
+  .main-div-1 {display: flex; width: 30%; height: 460.45px;margin-right: 20%;}
+  #right-column {border-radius: 0px 25px 25px 0px; padding-left: 5%; padding-right: 5%; width: 480px;}
+  #price-align {padding-top: 20px;}
+  #my-solut {padding-right: 43%;}
+}
