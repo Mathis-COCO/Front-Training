@@ -116,7 +116,7 @@ input {
 
 @media only screen and (min-width: 1440px) {
 /* desktop: */
-    body {background-image: url("../images/bg-main-desktop.png"); background-size: auto cover; background-repeat: no-repeat;}
+    body {background-image: url("../images/bg-main-desktop.png"); background-size: 480px 3000px; background-repeat: no-repeat;}
     .main-div {display: flex; margin-top: 15%;}
     .card-visuals {width: 42%; margin-right: 10%;}
     .card-back {margin-left: 48%;margin-top: 10%;}
