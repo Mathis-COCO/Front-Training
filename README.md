@@ -11,13 +11,13 @@ This page will be updated at every exercice that I try or finish.
 ## Difficulty (based from [Frontend Mentor](https://www.frontendmentor.io/challenges)):
 
 (⭐)
-[Product Card](../Front-Training/product-card/)
+[Product Card](product-card/)
 
 (⭐⭐)
-[interactive credit card](../Front-Training/interactive-credit-card/)
+[interactive credit card](interactive-credit-card/)
 
 (⭐⭐⭐)
-[product page](../Front-Training/product-page/)
+[product page](product-page/)
 
 (⭐⭐⭐⭐)
 
