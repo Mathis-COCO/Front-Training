@@ -6,6 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="import" href="https://fonts.google.com/specimen/Kumbh+Sans">
+  <script src="functions.js" defer></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
   <title>Frontend Mentor | E-commerce product page</title>
@@ -38,21 +40,36 @@
     <div class="product-images">
       <img id="product-full-image" src="../images/image-product-1.jpg" alt="product-image">
     </div>
-    <div>
-      <div>Sneaker Company</div>
-      <h1>Fall Limited Edition Sneakers</h1>
+    <div class="product-details">
+      <div id="sneaker-comp">Sneaker Company</div>
+      <h1 id="item-name">Fall Limited Edition Sneakers</h1>
       <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-      <div class="price">
-        <h2>$125.00</h2>
+      <div class="inline">
+        <h3>$</h3>
+        <h3 id="item-price">125.00</h3>
         <h5 id="reduction-percentage">50%</h5>
+      </div>
+      <p class="straight" style="font-size: 12px; margin-top: -14px;">$250.00</p>
+      <div class="inline">
+        <div class="inline" id="cart-counter">
+          <button onclick="buttonDecrement" id="decrement-count">-</button>
+          <div id="totalCart"></div>
+          <button onclick="buttonIncrement" id="increment-count">+</button>
+        </div>
+        <button onclick="incrementCart" id="add-to-cart">
+          <img src="../images/icon-cart-white.svg" alt="" id="add-to-cart-icon">
+          Add to cart
+        </button>
       </div>
     </div>
   </div>
 
-  $250.00
+  <div id="tests">
+    <div>
+      <h1 id="testside">test side</h1>
+      <div id="test-cart-size"></div>      
+    </div>
 
-  0
-  Add to cart
-
+  </div>
 </body>
 </html>
