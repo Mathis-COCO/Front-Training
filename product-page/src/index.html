@@ -11,14 +11,9 @@
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
   <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <!-- Top Nav -->
   <div class="inline" id="topnav">
     <div>
         <h1 style="margin-right: 50px;margin-left:100px">sneakers</h1>
@@ -31,11 +26,30 @@
       <div>Contact</div>
     </div>
     <div class="inline" style="margin-left:auto;margin-right:100px">
-        <img class="col-centered" src="../images/icon-cart.svg" alt="cart-icon" height="20px" style="padding-top: 25px;">
+        <div id="item-count-cart"></div>
+        <img class="col-centered" id="cart" onclick="showCart" src="../images/icon-cart.svg" alt="cart-icon" height="20px" style="padding-top: 25px;">
         <img class="col-centered" src="../images/image-avatar.png" alt="profile-picture" height="40px">
     </div>
   </div>
+  <!-- Cart Popup -->
+  <div class="container" id="cart-content">
+    <div class="shopping-cart" style="display: none;">
+      <h4 id="cart-text">Cart</h4>
+      <div class="inline">
+        <img src="../images/image-product-1-thumbnail.jpg" id="cart-product-image" alt="">
+        <ul class="shopping-cart-items">
+          <div id="item-name-cart"></div>
+          <div id="item-price-quantity"></div>
+        </ul>
+        <img src="../images/icon-delete.svg" id="clear-cart" onclick="clearCart()" alt="clear-cart">
+      </div>
 
+      <button id="checkout-button">
+        Checkout
+      </button>
+    </div>
+  </div>
+  <!-- Product details -->
   <div class="inline" id="product">
     <div class="product-images">
       <img id="product-full-image" src="../images/image-product-1.jpg" alt="product-image">
@@ -62,14 +76,6 @@
         </button>
       </div>
     </div>
-  </div>
-
-  <div id="tests">
-    <div>
-      <h1 id="testside">test side</h1>
-      <div id="test-cart-size"></div>      
-    </div>
-
   </div>
 </body>
 </html>
