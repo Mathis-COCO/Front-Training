@@ -71,6 +71,7 @@ body {
 
 #product-full-image {
     border-radius: 15px;
+    height: 400px;
 }
 
 #reduction-percentage {

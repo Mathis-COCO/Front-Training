@@ -21,6 +21,7 @@ cartfullcontent.innerHTML = itemcountfull;
 
 let clearcart = document.getElementById("clear-cart");
 let checkoutbutton = document.getElementById("checkout-button");
+let cartproductimg = document.getElementById("cart-product-image");
 
 
 const buttonIncrement = () => {
@@ -44,6 +45,7 @@ const incrementCart = () => {
     cartitemname.innerHTML = itemname;
     clearcart = document.getElementById("clear-cart").style.display = "block";
     checkoutbutton = document.getElementById("checkout-button").style.display = "block";
+    cartproductimg = document.getElementById("cart-product-image").style.display = "block";
 };
 
 const showCart = () => {
@@ -59,6 +61,7 @@ const clearCart = () => {
     cartcount.innerHTML = itemcount;
     clearcart = document.getElementById("clear-cart").style.display = "none";
     checkoutbutton = document.getElementById("checkout-button").style.display = "none";
+    cartproductimg = document.getElementById("cart-product-image").style.display = "none";
 }
 
 incrementCount.addEventListener("click", buttonIncrement);
