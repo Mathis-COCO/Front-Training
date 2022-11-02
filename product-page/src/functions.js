@@ -3,6 +3,10 @@ const decrementCount = document.getElementById("decrement-count")
 const incrementedCart = document.getElementById("add-to-cart")
 const showCartContent = document.getElementById("cart")
 const clearCartContent = document.getElementById("clear-cart")
+const showImagesFull = document.getElementById("product-full-image")
+const closeButton = document.getElementById("closebutton")
+const nextButton = document.getElementById("next-button")
+const prevButton = document.getElementById("prev-button")
 
 let totalCart = document.getElementById("totalCart");
 let count = 0;
@@ -11,6 +15,8 @@ let itemcount = 0;
 let itemsprice = 0;
 let itemcountfull = "Your cart is empty.";
 let itemname = "";
+let currentimage = 1;
+let imglist = ["../images/image-product-1.jpg"]
 
 let cartcount = document.getElementById("item-count-cart");
 cartcount.innerHTML = itemcount;
@@ -22,6 +28,8 @@ cartfullcontent.innerHTML = itemcountfull;
 let clearcart = document.getElementById("clear-cart");
 let checkoutbutton = document.getElementById("checkout-button");
 let cartproductimg = document.getElementById("cart-product-image");
+
+let fullimage = document.getElementById("product-full-image");
 
 
 const buttonIncrement = () => {
@@ -52,6 +60,30 @@ const showCart = () => {
     $(".shopping-cart").fadeToggle( "fast");
 }
 
+const showImages = () => {
+    $(".product-images-popup").fadeToggle( "fast");
+}
+
+const closeImages = () => {
+    $(".product-images-popup").fadeToggle( "fast");
+}
+
+const nextImage = () => {
+    currentimage += 1
+    if (currentimage > 4) {
+        currentimage = 1;
+    }
+    fullimage.src = `../images/image-product-${currentimage}.jpg`
+}
+
+const prevImage = () => {
+    currentimage -= 1
+    if (currentimage < 1) {
+        currentimage = 4;
+    }
+    fullimage.src = `../images/image-product-${currentimage}.jpg`
+}
+
 const clearCart = () => {
     itemcount = 0;
     itemname = "";
@@ -69,3 +101,7 @@ decrementCount.addEventListener("click", buttonDecrement);
 incrementedCart.addEventListener("click", incrementCart);
 showCartContent.addEventListener("click", showCart);
 clearCartContent.addEventListener("click", clearCart);
+showImagesFull.addEventListener("click", showImages);
+closeButton.addEventListener("click", closeImages);
+nextButton.addEventListener("click", nextImage);
+prevButton.addEventListener("click", prevImage);

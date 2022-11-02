@@ -13,69 +13,95 @@
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <body>
-  <!-- Top Nav -->
-  <div class="inline" id="topnav">
-    <div>
-        <h1 style="margin-right: 50px;margin-left:100px">sneakers</h1>
-    </div>
-    <div class="navbar-clickable-items">
-      <div>Collections</div>
-      <div>Men</div>
-      <div>Women</div>
-      <div>About</div>
-      <div>Contact</div>
-    </div>
-    <div class="inline" style="margin-left:auto;margin-right:100px">
-        <div id="item-count-cart"></div>
-        <img class="col-centered" id="cart" onclick="showCart" src="../images/icon-cart.svg" alt="cart-icon" height="20px" style="padding-top: 25px;">
-        <img class="col-centered" src="../images/image-avatar.png" alt="profile-picture" height="40px">
-    </div>
-  </div>
-  <!-- Cart Popup -->
-  <div class="container" id="cart-content">
-    <div class="shopping-cart" style="display: none;">
-      <h4 id="cart-text">Cart</h4>
-      <div class="inline">
-        <img src="../images/image-product-1-thumbnail.jpg" id="cart-product-image" alt="product-image">
-        <ul class="shopping-cart-items">
-          <div id="item-name-cart"></div>
-          <div id="item-price-quantity"></div>
-        </ul>
-        <img src="../images/icon-delete.svg" id="clear-cart" onclick="clearCart()" alt="clear-cart">
+  <div class="main-page">
+    <!-- Top Nav -->
+    <div class="inline" id="topnav">
+      <div>
+          <h1 style="margin-right: 50px;margin-left:100px">sneakers</h1>
       </div>
-
-      <button id="checkout-button">
-        Checkout
-      </button>
-    </div>
-  </div>
-  <!-- Product details -->
-  <div class="inline" id="product">
-    <div class="product-images">
-      <img id="product-full-image" src="../images/image-product-1.jpg" alt="product-image">
-    </div>
-    <div class="product-details">
-      <div id="sneaker-comp">Sneaker Company</div>
-      <h1 id="item-name">Fall Limited Edition Sneakers</h1>
-      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-      <div class="inline">
-        <h3>$</h3>
-        <h3 id="item-price">125.00</h3>
-        <h5 id="reduction-percentage">50%</h5>
+      <div class="navbar-clickable-items">
+        <div>Collections</div>
+        <div>Men</div>
+        <div>Women</div>
+        <div>About</div>
+        <div>Contact</div>
       </div>
-      <p class="straight" style="font-size: 12px; margin-top: -14px;">$250.00</p>
-      <div class="inline">
-        <div class="inline" id="cart-counter">
-          <button onclick="buttonDecrement" id="decrement-count">-</button>
-          <div id="totalCart"></div>
-          <button onclick="buttonIncrement" id="increment-count">+</button>
+      <div class="inline" style="margin-left:auto;margin-right:100px">
+          <div id="item-count-cart"></div>
+          <img class="col-centered" id="cart" onclick="showCart" src="../images/icon-cart.svg" alt="cart-icon" height="20px" style="padding-top: 25px;">
+          <img class="col-centered" src="../images/image-avatar.png" alt="profile-picture" height="40px">
+      </div>
+    </div>
+    <!-- Cart Popup -->
+    <div class="container" id="cart-content">
+      <div class="shopping-cart" style="display: none;">
+        <h4 id="cart-text">Cart</h4>
+        <div class="inline">
+          <img src="" id="cart-product-image" alt="product-image">
+          <ul class="shopping-cart-items">
+            <div id="item-name-cart"></div>
+            <div id="item-price-quantity"></div>
+          </ul>
+          <img src="../images/icon-delete.svg" id="clear-cart" onclick="clearCart()" alt="clear-cart">
         </div>
-        <button onclick="incrementCart" id="add-to-cart">
-          <img src="../images/icon-cart-white.svg" alt="" id="add-to-cart-icon">
-          Add to cart
+
+        <button id="checkout-button">
+          Checkout
         </button>
       </div>
     </div>
+    <!-- Product details -->
+    <div class="inline" id="product">
+      <div class="product-images">
+        <img id="product-full-image" onclick="showImages" src="../images/image-product-1.jpg" alt="product-image">
+        <div class="inline">
+          <img class="product-thumb-image" src="../images/image-product-1-thumbnail.jpg" alt="product-image-1">
+          <img class="product-thumb-image" src="../images/image-product-2-thumbnail.jpg" alt="product-image-2">
+          <img class="product-thumb-image" src="../images/image-product-3-thumbnail.jpg" alt="product-image-3">
+          <img class="product-thumb-image" src="../images/image-product-4-thumbnail.jpg" alt="product-image-4">
+        </div>
+      </div>
+
+      <!-- Product images popup -->
+      <div class="product-images-popup">
+        <div>
+          <div id="closebutton" onclick="showImages"></div>
+          <div id="prev-button" onclick="prevImage">OOOOOO</div>
+          <img id="product-full-image-popup" src="../images/image-product-1.jpg" alt="product-image">
+          <div id="next-button" onclick="nextImage">OOOOOOOO</div>
+          <div class="inline" id="thumb-img-popup">
+            <img class="product-thumb-image" src="../images/image-product-1-thumbnail.jpg" alt="product-image-1">
+            <img class="product-thumb-image" src="../images/image-product-2-thumbnail.jpg" alt="product-image-2">
+            <img class="product-thumb-image" src="../images/image-product-3-thumbnail.jpg" alt="product-image-3">
+            <img class="product-thumb-image" src="../images/image-product-4-thumbnail.jpg" alt="product-image-4">
+          </div>
+        </div>        
+      </div>
+
+      <div class="product-details">
+        <div id="sneaker-comp">Sneaker Company</div>
+        <h1 id="item-name">Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="inline">
+          <h3>$</h3>
+          <h3 id="item-price">125.00</h3>
+          <h5 id="reduction-percentage">50%</h5>
+        </div>
+        <p class="straight" style="font-size: 12px; margin-top: -14px;">$250.00</p>
+        <div class="inline">
+          <div class="inline" id="cart-counter">
+            <button onclick="buttonDecrement" id="decrement-count">-</button>
+            <div id="totalCart"></div>
+            <button onclick="buttonIncrement" id="increment-count">+</button>
+          </div>
+          <button onclick="incrementCart" id="add-to-cart">
+            <img src="../images/icon-cart-white.svg" alt="" id="add-to-cart-icon">
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
+  
 </body>
 </html>
