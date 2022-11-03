@@ -239,6 +239,7 @@ body {
 #closebutton {
     height: 20px;
     margin-top: 350px;
+    margin-bottom: 20px;
     margin-left: 580px;
     background: url(../images/icon-close.svg) no-repeat;
 }
@@ -246,6 +247,7 @@ body {
 #closebutton:hover {
     height: 20px;
     margin-top: 350px;
+    margin-bottom: 20px;
     margin-left: 580px;
     background: url(../images/icon-close-orange.svg) no-repeat;
 }
@@ -253,8 +255,24 @@ body {
 #product-full-image-popup {
     border-radius: 15px;
     height: 600px;
+    width: 600px;
 }
 
 #thumb-img-popup {
     margin-left: 100px;
+}
+
+#prev-button, #next-button {
+    display: flex;
+    background-color: white;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+}
+
+#image-and-buttons {
+    margin-left: -40px;
 }

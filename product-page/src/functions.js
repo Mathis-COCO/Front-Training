@@ -30,6 +30,11 @@ let checkoutbutton = document.getElementById("checkout-button");
 let cartproductimg = document.getElementById("cart-product-image");
 
 let fullimage = document.getElementById("product-full-image");
+let fullimagepop = document.getElementById("product-full-image-popup");
+let smallimgx = document.getElementById(`img-small-${currentimage}`);
+smallimgx.style.filter = "brightness(0.25)";
+let smallimgx1 = document.getElementById(`img-small-${currentimage-1}`);
+let smallimgx2 = document.getElementById(`img-small-${currentimage+1}`);
 
 
 const buttonIncrement = () => {
@@ -69,19 +74,29 @@ const closeImages = () => {
 }
 
 const nextImage = () => {
-    currentimage += 1
+    smallimgx = document.getElementById(`img-small-${currentimage}`);
+    smallimgx.style.filter = "brightness(1)";
+    currentimage += 1;
     if (currentimage > 4) {
         currentimage = 1;
     }
-    fullimage.src = `../images/image-product-${currentimage}.jpg`
+    fullimage.src = `../images/image-product-${currentimage}.jpg`;
+    fullimagepop.src = `../images/image-product-${currentimage}.jpg`;
+    smallimgx = document.getElementById(`img-small-${currentimage}`);
+    smallimgx.style.filter = "brightness(0.25)";
 }
 
 const prevImage = () => {
-    currentimage -= 1
+    smallimgx = document.getElementById(`img-small-${currentimage}`);
+    smallimgx.style.filter = "brightness(1)";
+    currentimage -= 1;
     if (currentimage < 1) {
         currentimage = 4;
     }
-    fullimage.src = `../images/image-product-${currentimage}.jpg`
+    fullimage.src = `../images/image-product-${currentimage}.jpg`;
+    fullimagepop.src = `../images/image-product-${currentimage}.jpg`;
+    smallimgx = document.getElementById(`img-small-${currentimage}`);
+    smallimgx.style.filter = "brightness(0.25)";
 }
 
 const clearCart = () => {

@@ -55,10 +55,10 @@
       <div class="product-images">
         <img id="product-full-image" onclick="showImages" src="../images/image-product-1.jpg" alt="product-image">
         <div class="inline">
-          <img class="product-thumb-image" src="../images/image-product-1-thumbnail.jpg" alt="product-image-1">
-          <img class="product-thumb-image" src="../images/image-product-2-thumbnail.jpg" alt="product-image-2">
-          <img class="product-thumb-image" src="../images/image-product-3-thumbnail.jpg" alt="product-image-3">
-          <img class="product-thumb-image" src="../images/image-product-4-thumbnail.jpg" alt="product-image-4">
+          <img id="img-small-1" class="product-thumb-image" src="../images/image-product-1-thumbnail.jpg" alt="product-image-1">
+          <img id="img-small-2" class="product-thumb-image" src="../images/image-product-2-thumbnail.jpg" alt="product-image-2">
+          <img id="img-small-3" class="product-thumb-image" src="../images/image-product-3-thumbnail.jpg" alt="product-image-3">
+          <img id="img-small-4" class="product-thumb-image" src="../images/image-product-4-thumbnail.jpg" alt="product-image-4">
         </div>
       </div>
 
@@ -66,14 +66,20 @@
       <div class="product-images-popup">
         <div>
           <div id="closebutton" onclick="showImages"></div>
-          <div id="prev-button" onclick="prevImage">OOOOOO</div>
-          <img id="product-full-image-popup" src="../images/image-product-1.jpg" alt="product-image">
-          <div id="next-button" onclick="nextImage">OOOOOOOO</div>
+          <div class="inline" id="image-and-buttons">
+            <div id="prev-button" onclick="prevImage">
+              <img src="../images/icon-previous.svg" alt="">
+            </div>
+            <img id="product-full-image-popup" src="../images/image-product-1.jpg" alt="product-image">
+            <div id="next-button" onclick="nextImage">
+              <img src="../images/icon-next.svg" alt="">
+            </div>            
+          </div>
           <div class="inline" id="thumb-img-popup">
-            <img class="product-thumb-image" src="../images/image-product-1-thumbnail.jpg" alt="product-image-1">
-            <img class="product-thumb-image" src="../images/image-product-2-thumbnail.jpg" alt="product-image-2">
-            <img class="product-thumb-image" src="../images/image-product-3-thumbnail.jpg" alt="product-image-3">
-            <img class="product-thumb-image" src="../images/image-product-4-thumbnail.jpg" alt="product-image-4">
+            <img id="img-small-1" class="product-thumb-image" src="../images/image-product-1-thumbnail.jpg" alt="product-image-1">
+            <img id="img-small-2" class="product-thumb-image" src="../images/image-product-2-thumbnail.jpg" alt="product-image-2">
+            <img id="img-small-3" class="product-thumb-image" src="../images/image-product-3-thumbnail.jpg" alt="product-image-3">
+            <img id="img-small-4" class="product-thumb-image" src="../images/image-product-4-thumbnail.jpg" alt="product-image-4">
           </div>
         </div>        
       </div>
