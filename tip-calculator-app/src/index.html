@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
+
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <div>
+    <div class="inline" id="main-div">
+      <div>
+        <p id="left-div-txt">Bill</p>
+        <input type="number" placeholder="0">
+        <label for="percent-btn" id="left-div-txt">Select Tip %</label><br>
+        <div id="percent-btn">
+          <div class="inline" id="percentage-1">
+            <button class="percentage-btn" onclick="">5%</button>
+            <button class="percentage-btn" onclick="">10%</button>
+            <button class="percentage-btn" onclick="">15%</button>
+          </div>
+          <div class="inline">
+            <button class="percentage-btn" onclick="">25%</button>
+            <button class="percentage-btn" onclick="">50%</button>
+            <button onclick="" id="custom-btn">Custom</button>
+          </div>          
+        </div>
+
+        <label for="nbr-of-ppl"id="left-div-txt">Number of People</label><br>
+        <input type="number" placeholder="0">
+      </div>
+      <div id="right-div">
+        <div class="inline" id="right-c-nbr">
+          <div>
+            <p id="right-div-txt">Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <div id="tip-amount">$0.00</div>
+        </div>
+        <div class="inline" id="right-c-nbr">
+          <div>
+            <p class="right-div-txt">Total</p>
+            <p>/ person</p>
+          </div>
+          <div id="total-amount">$0.00</div>
+        </div>
+        <div id="reset-btn">reset</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
